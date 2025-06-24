@@ -8,11 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    var onLoginSuccess: (() -> Void)?
+    weak var coordinator: AuthCoordinator?
 
     private let usernameField = UITextField()
     private let passwordField = UITextField()
     private let loginButton = UIButton(type: .system)
+    private let registrationButton = UIButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,9 @@ class LoginViewController: UIViewController {
         passwordField.placeholder = "Password"
         passwordField.isSecureTextEntry = true
         loginButton.setTitle("Login", for: .normal)
+        registrationButton.setTitle("Registration", for: .normal)
 
-        let stack = UIStackView(arrangedSubviews: [usernameField, passwordField, loginButton])
+        let stack = UIStackView(arrangedSubviews: [usernameField, passwordField, loginButton, registrationButton])
         stack.axis = .vertical
         stack.spacing = 16
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -40,11 +42,17 @@ class LoginViewController: UIViewController {
         ])
 
         loginButton.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        registrationButton.addTarget(self, action: #selector(goToRegistration), for: .touchUpInside)
     }
 
     @objc private func handleLogin() {
-        // Здесь могла бы быть валидация
-        onLoginSuccess?()
+        //можно добавить валидацию
+        coordinator?.showMain()
+    }
+    
+    @objc private func goToRegistration() {
+        //TODO: проверить открытие экранов
+        coordinator?.showRegistration()
     }
 }
 
