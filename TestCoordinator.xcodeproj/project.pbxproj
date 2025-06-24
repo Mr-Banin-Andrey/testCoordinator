@@ -18,6 +18,7 @@
 		0F665D142E0A846400711708 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F665D132E0A846300711708 /* LoginViewController.swift */; };
 		0F665D162E0A847C00711708 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F665D152E0A847B00711708 /* HomeViewController.swift */; };
 		0F665D182E0A849100711708 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F665D172E0A848B00711708 /* SettingsViewController.swift */; };
+		0F665D1A2E0A8A0B00711708 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F665D192E0A8A0600711708 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0F665D132E0A846300711708 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F665D152E0A847B00711708 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F665D172E0A848B00711708 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0F665D192E0A8A0600711708 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 				0F665CED2E0A836700711708 /* Coordinator.swift */,
 				0F665CFD2E0A83A500711708 /* AppCoordinator.swift */,
 				0F665CFF2E0A83BB00711708 /* AuthCoordinator.swift */,
-				0F665D012E0A83D700711708 /* MainTabBarCoordinator.swift */,
 				0F665D132E0A846300711708 /* LoginViewController.swift */,
+				0F665D192E0A8A0600711708 /* RegistrationViewController.swift */,
+				0F665D012E0A83D700711708 /* MainTabBarCoordinator.swift */,
 				0F665D152E0A847B00711708 /* HomeViewController.swift */,
 				0F665D172E0A848B00711708 /* SettingsViewController.swift */,
 			);
@@ -178,6 +181,7 @@
 				0F665D142E0A846400711708 /* LoginViewController.swift in Sources */,
 				0F665D162E0A847C00711708 /* HomeViewController.swift in Sources */,
 				0F665D022E0A83D800711708 /* MainTabBarCoordinator.swift in Sources */,
+				0F665D1A2E0A8A0B00711708 /* RegistrationViewController.swift in Sources */,
 				0F665CFE2E0A83A600711708 /* AppCoordinator.swift in Sources */,
 				0F665D002E0A83C500711708 /* AuthCoordinator.swift in Sources */,
 			);

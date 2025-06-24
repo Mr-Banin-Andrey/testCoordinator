@@ -23,16 +23,14 @@ class AppCoordinator: Coordinator {
         showLogin()
     }
 
-    private func showLogin() {
+    func showLogin() {
         let authCoordinator = AuthCoordinator(navigationController: navigationController)
+        authCoordinator.parentCoordinator = self
         childCoordinator = authCoordinator
-        authCoordinator.onLoginSuccess = { [weak self] in
-            self?.showMainTabBar()
-        }
         authCoordinator.start()
     }
 
-    private func showMainTabBar() {
+    func showMainTabBar() {
         let mainTabCoordinator = MainTabBarCoordinator()
         childCoordinator = mainTabCoordinator
         window.rootViewController = mainTabCoordinator.tabBarController
