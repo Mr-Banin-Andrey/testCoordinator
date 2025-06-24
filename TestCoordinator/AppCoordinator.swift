@@ -33,7 +33,15 @@ class AppCoordinator: Coordinator {
     func showMainTabBar() {
         let mainTabCoordinator = MainTabBarCoordinator()
         childCoordinator = mainTabCoordinator
-        window.rootViewController = mainTabCoordinator.tabBarController
+        
+        UIView.transition(with: window,
+                          duration: 0.4,
+                          options: .transitionFlipFromLeft,
+                          animations: {
+                              self.window.rootViewController = mainTabCoordinator.tabBarController
+                          },
+                          completion: nil)
+        
         mainTabCoordinator.start()
     }
 }
